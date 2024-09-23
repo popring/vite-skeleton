@@ -5,14 +5,14 @@ import { SkeletonPlugin} from './plugins/SkeletonPlugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/vite-skeleton',
   plugins: [
     react(),
     Pages({
       dirs: [
         {
           dir: 'src/pages',
-          baseRoute: '',
+          baseRoute: '/vite-skeleton',
         },
       ],
       exclude: ['**/components/*.*'],
