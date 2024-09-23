@@ -1,5 +1,4 @@
 // ==UserScript==
-
 // 递归生成骨架图
 function processElement(el, skeletonOverlay, bodyRect) {
   const children = el.children;
@@ -39,6 +38,7 @@ function generateSkeleton() {
 
   const bodyRect = document.body.getBoundingClientRect();
 
+  // 排除 <br> 标签
   document
     .querySelectorAll('div, p, h1, h2, h3, h4, h5, h6, a, img, span, em')
     .forEach((el) => {
@@ -73,7 +73,6 @@ function insertSkeletonStyles(skeletonOverlay) {
   const styleSheet = document.createElement('style');
   styleSheet.type = 'text/css';
   styleSheet.innerHTML = skeletonStyles;
-  console.log('%c [ styleSheet ]-78', 'font-size:13px; background:#1d9520; color:#61d964;', styleSheet)
   skeletonOverlay.appendChild(styleSheet);
 }
 
@@ -88,6 +87,27 @@ function toggleSkeleton() {
   }
 }
 
+// 添加控制按钮
+function addToggleButton() {
+  const button = document.createElement('button');
+  button.innerText = '切换骨架图显示';
+  button.style.position = 'fixed';
+  button.style.top = '10px';
+  button.style.right = '10px';
+  button.style.zIndex = 10000;
+  button.onclick = toggleSkeleton;
+
+  document.body.appendChild(button);
+}
+
+// 初始化函数，添加按钮
+function init() {
+  addToggleButton();
+}
+
 // 将核心函数绑定到 window 对象上
 window.generateSkeleton = generateSkeleton;
 window.toggleSkeleton = toggleSkeleton;
+
+// 初始化
+init();
