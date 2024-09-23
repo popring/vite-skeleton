@@ -8,9 +8,9 @@
 
 本仓库主要包含两个路由页面：
 
-1. `/`
-2. `/home`
+1. `/vite-skeleton/`
+2. `/vite-skeleton/normal`
 
-骨架屏的实现仅在 `/home` 页面生效，所有相关源代码均位于 `/plugins/SkeletonPlugin` 目录下。
+骨架屏的实现仅在 `/vite-skeleton/` 页面生效，所有相关源代码均位于 `/plugins/SkeletonPlugin` 目录下。
 
 此外，`tempermonkey` 文件夹中的 `genSkeleton.js` 脚本用于生成骨架图，已发布至油猴 https://greasyfork.org/zh-CN/scripts/509875-skeletonscript 。
