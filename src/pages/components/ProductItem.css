@@ -1,5 +1,5 @@
 .product-item {
-  width: 48%;  /* 设置为48%以便在小屏设备上一行展示两个商品 */
+  width: 40%;
   margin-bottom: 10px;
   padding: 10px;
   background-color: #fff;
@@ -30,7 +30,7 @@
 /* 针对 iPhone 6 (375px 宽度) 等设备的响应式设计 */
 @media (max-width: 375px) {
   .product-item {
-    width: 48%;  /* 保持40%宽度，一行展示两个商品 */
+    width: 40%;  /* 保持40%宽度，一行展示两个商品 */
   }
 }
 

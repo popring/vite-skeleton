@@ -5,6 +5,7 @@ import { SkeletonPlugin} from './plugins/SkeletonPlugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     Pages({
