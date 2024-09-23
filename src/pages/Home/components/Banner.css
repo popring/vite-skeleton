@@ -1,0 +1,24 @@
+.banner {
+  margin: 10px 0;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* 固定横幅的高度 */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover; /* 保持图片的宽高比例，图片会裁剪以适应容器 */
+  transition: opacity 0.5s ease-in-out; /* 添加淡入淡出效果 */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner img.active {
+  opacity: 1;
+}

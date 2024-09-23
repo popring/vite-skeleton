@@ -1,0 +1,42 @@
+.product-item {
+  width: 48%;  /* 设置为48%以便在小屏设备上一行展示两个商品 */
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 130px;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.product-info p {
+  color: #ff6f61;
+  font-size: 14px;
+}
+
+/* 针对 iPhone 6 (375px 宽度) 等设备的响应式设计 */
+@media (max-width: 375px) {
+  .product-item {
+    width: 48%;  /* 保持40%宽度，一行展示两个商品 */
+  }
+}
+
+/* 针对更大屏幕的响应式设计 */
+@media (min-width: 768px) {
+  .product-item {
+    width: 30%;  /* 更大的屏幕上展示三个商品 */
+  }
+}

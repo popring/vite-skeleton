@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ff6f61;
+  color: white;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart {
+  font-size: 18px;
+}
