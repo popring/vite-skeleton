@@ -17,7 +17,7 @@ export function SkeletonPlugin(): PluginOption {
         tags: [
           {
             tag: 'script',
-            injectTo: 'body-prepend',
+            injectTo: 'body',
             children: `var map=${JSON.stringify(content)};${code}`,
           },
         ],
