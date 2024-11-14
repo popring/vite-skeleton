@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
   BrowserRouter,
@@ -11,9 +11,9 @@ import routes from '~react-pages'
 // eslint-disable-next-line react-refresh/only-export-components
 function App() {
   return (
-    <>
+    <Suspense>
       {useRoutes(routes)}
-    </>
+    </Suspense>
   )
 }
 
