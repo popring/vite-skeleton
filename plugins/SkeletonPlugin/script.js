@@ -1,7 +1,9 @@
 const wrapId = 'skeleton-overlay';
 
 function showSkeleton(content) {
-  if (document.getElementById(wrapId)) {
+  let sEl = document.getElementById(wrapId)
+  if (sEl) {
+    sEl.style.display = 'block';
     return
   }
   document.body.innerHTML += content
@@ -56,7 +58,9 @@ function observeDOMChangesForClassName(targetNode, targetClassName, callback) {
 function startCheck() {
   const content = matchPathname();
   if (content) {
+    // 展示骨架图
     showSkeleton(content);
+    // DOM中出现指定元素，隐藏骨架图
     observeDOMChangesForClassName(document.body, 'product-list', () => {
       console.log('hidden showSkeleton');
       removeSkeleton();

@@ -2,7 +2,9 @@ import { PluginOption } from 'vite';
 import { join } from 'path';
 import { readFile } from 'node:fs/promises';
 
+// 骨架图映射数据
 const filename = join(__dirname, './homeSkeleton.js');
+// 骨架图展示隐藏逻辑
 const code = await readFile(join(__dirname, './script.js'), {
   encoding: 'utf-8',
 });
